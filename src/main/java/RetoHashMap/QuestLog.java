@@ -3,7 +3,7 @@ package RetoHashMap;
 import java.util.HashMap;
 
 public class QuestLog {
-    private HashMap<String, Quest> quests;  // Mapa: ID → Quest
+    private HashMap<String, Quest> quests;// Mapa: ID → Quest
 
     // El constructor no hace falta modificarlo
     public QuestLog() {
@@ -12,15 +12,21 @@ public class QuestLog {
 
     public void addQuest(Quest quest) {
         // Aquí tu código
+        quests.put(quest.getId(), quest);
     }
 
     public Quest getQuest(String questId) {
         // Aquí tu código
-        return null; // Sustituye null por el valor que sea
+        // Sustituye null por el valor que sea
+        return quests.get(questId);
     }
 
     public void completeQuest(String questId) {
         // Aquí tu código
+        if (quests.get(questId) != null) {
+            var quest = quests.get(questId);
+            quest.setCompleted(true);
+        }
     }
 
     // Este getter no lo vamos a modificar
