@@ -2,6 +2,7 @@ package RetoHashMap;
 
 // Esta clase no la vamos a modificar
 public class Quest {
+
     private String id;          // ID único (clave en el HashMap)
     private String description; // Descripción de la misión
     private boolean completed;  // Estado
